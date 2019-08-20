@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Conexion1.designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Conexion1.dbml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Conexion1.dbml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Conexion1.cs">
+      <DependentUpon>Conexion1.dbml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Conexion1.dbml.layout">
+      <DependentUpon>Conexion1.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>
