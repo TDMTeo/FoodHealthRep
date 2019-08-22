@@ -22,20 +22,21 @@ namespace Iniciar
             String user = txtNombre.Text;
             String pass = txtContra.Text;
             int Rol = 0;
+            Rol = Rol + 1;
             int UserID = Modelo.IniciarSesion(user, pass, Rol);
+            
             if (UserID == 0)
             {
                 Response.Write("<Script> 'Datos Incorrectos' <Script> ");
             }
             else
             {
-                Response.Write("<Script> 'Datos Incorrectos' <Script> ");
-                if (Rol == 1)
+                Response.Write("<Script> 'Datos Correctos' <Script> ");
+               if (Rol == 1)
                 {
-                    Response.Redirect("Admin.aspx");
+                    Response.Redirect("Administrador.aspx");
                 }
-                else
-                if (Rol == 2)
+               else
                 {
                     Response.Redirect("Natural.aspx");
                 }

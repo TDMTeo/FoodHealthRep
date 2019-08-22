@@ -13,13 +13,8 @@ namespace Iniciar
             Datos1DataContext Conexion = new Datos1DataContext();
             int UserID = 0;
             var query1 = from p in Conexion.personas
-                         where p.Nombre == user && p.Documento == pass 
+                         where p.Nombre == user && p.Documento == pass && p.RolesID==Rol 
                          select p;
-
-            var Roles = from r in Conexion.personas
-                      where r.RolesID == Rol
-                      select r;
-
             if (query1.Count() > 0)
             {
                 UserID = query1.First().PersonaID;
