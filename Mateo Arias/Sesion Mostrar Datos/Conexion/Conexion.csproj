@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Datos.designer.cs" />
+    <Compile Remove="Datos1.designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Datos1.dbml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Datos1.dbml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{3259aa49-8aa1-44d3-9025-a0b520596a8c}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Datos1.dbml.layout">
+      <DependentUpon>Datos1.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+
+</Project>

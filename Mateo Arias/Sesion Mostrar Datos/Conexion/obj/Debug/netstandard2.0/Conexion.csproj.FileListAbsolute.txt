@@ -1,0 +1,4 @@
+C:\Users\nauti\Desktop\Nueva carpeta (2)\Sesion\Conexion\obj\Debug\netstandard2.0\Conexion.csprojAssemblyReference.cache
+C:\Users\nauti\Desktop\Nueva carpeta (2)\Sesion\Conexion\obj\Debug\netstandard2.0\Conexion.csproj.CoreCompileInputs.cache
+C:\Users\nauti\Desktop\Nueva carpeta (2)\Sesion\Conexion\obj\Debug\netstandard2.0\Conexion.AssemblyInfoInputs.cache
+C:\Users\nauti\Desktop\Nueva carpeta (2)\Sesion\Conexion\obj\Debug\netstandard2.0\Conexion.AssemblyInfo.cs
