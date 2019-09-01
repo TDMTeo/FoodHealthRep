@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Prueba4" Class="DatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-3538PPG;Initial Catalog=Prueba4;Integrated Security=True" SettingsObjectName="Clases.Properties.Settings" SettingsPropertyName="Prueba4ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Administrador" Member="Administrador">
+    <Type Name="Administrador">
+      <Column Name="AdministradorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Rol_Administrador" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rol" Member="Rol">
+    <Type Name="Rol">
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NombreRol" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="Rol_Administrador" Member="Administrador" ThisKey="RolID" OtherKey="RolID" Type="Administrador" />
+      <Association Name="Rol_Cliente" Member="Cliente" ThisKey="RolID" OtherKey="RolID" Type="Cliente" />
+      <Association Name="Rol_Domiciliario" Member="Domiciliario" ThisKey="RolID" OtherKey="RolID" Type="Domiciliario" />
+      <Association Name="Rol_personas" Member="personas" ThisKey="RolID" OtherKey="RolID" Type="personas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cliente" Member="Cliente">
+    <Type Name="Cliente">
+      <Column Name="ClienteID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Rol_Cliente" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Domiciliario" Member="Domiciliario">
+    <Type Name="Domiciliario">
+      <Column Name="DomiciliarioID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Rol_Domiciliario" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.personas" Member="personas">
+    <Type Name="personas">
+      <Column Name="PersonaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Documento" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Rol_personas" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
