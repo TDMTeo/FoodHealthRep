@@ -10,16 +10,16 @@
 namespace Logistica {
     
     
-    public partial class Iniciar {
+    public partial class Pruebas {
         
         /// <summary>
-        /// Control form1.
+        /// Control txtCorr.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtCorr;
         
         /// <summary>
         /// Control Label1.
@@ -31,13 +31,13 @@ namespace Logistica {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control txtNombre.
+        /// Control txtContr.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.TextBox txtContr;
         
         /// <summary>
         /// Control Label2.
@@ -49,13 +49,13 @@ namespace Logistica {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control txtContra.
+        /// Control customCheck1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContra;
+        protected global::System.Web.UI.WebControls.CheckBox customCheck1;
         
         /// <summary>
         /// Control Button1.

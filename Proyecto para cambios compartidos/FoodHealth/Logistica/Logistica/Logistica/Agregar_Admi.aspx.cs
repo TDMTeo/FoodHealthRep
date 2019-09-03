@@ -5,9 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Clases;
+
 namespace Logistica
 {
-    public partial class Agregar_Admi : System.Web.UI.Page
+    public partial class Pruebas2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,14 +20,14 @@ namespace Logistica
             int Rol = 0;
             String Documento = txtDocumento.Text;
             String Nombre = txtNombre.Text;
-            String Correo = txtCorreo.Text;
-            String Direccion  = txtDireccion.Text;
-            String contraseña = txtContraseña.Text;
-            
+            String Correo = txtEmail.Text;
+            String Direccion = txtDireccion.Text;
+            String contraseña = txtContra.Text;
+
             if (RadioCliente.Checked == true)
             {
                 Rol = 1;
-                int resultado = Registrar.RegistrarCliente(Documento, Correo, Nombre, Direccion, contraseña, Rol);
+                int resultado = Registrar_Cliente.RegistrarCliente(Documento, Correo, Nombre, Direccion, contraseña, Rol);
 
                 if (resultado == 1)
                 {
@@ -45,7 +46,7 @@ namespace Logistica
             if (RadioAdmin.Checked == true)
             {
                 Rol = 2;
-                int resultado = Registrar.RegistrarDomi(Documento, Correo, Nombre, contraseña, Rol);
+                int resultado = Registrar_Domi.RegistrarDomi(Documento, Correo, Nombre, contraseña, Rol);
 
                 if (resultado == 1)
                 {
@@ -73,11 +74,10 @@ namespace Logistica
         public void Limpiar()
         {
             txtDocumento.Text = string.Empty;
-            txtCorreo.Text = string.Empty;
+            txtEmail.Text = string.Empty;
             txtNombre.Text = string.Empty;
             txtDireccion.Text = string.Empty;
-            txtContraseña.Text = string.Empty;
+            txtContra.Text = string.Empty;
         }
     }
 }
-

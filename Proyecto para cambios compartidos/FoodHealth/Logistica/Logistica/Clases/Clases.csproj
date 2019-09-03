@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
+    <Compile Include="Registrar_Admin.cs" />
+    <Compile Include="Iniciar_Sesion.cs" />
     <Compile Include="Datos.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Datos.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ListaPersonas.cs" />
     <Compile Include="Mostrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -55,7 +57,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Registrar.cs" />
+    <Compile Include="Registrar_Cliente.cs" />
+    <Compile Include="Registrar_Domi.cs" />
+    <Compile Include="Registrar_Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

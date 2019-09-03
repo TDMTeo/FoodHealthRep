@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>FoodHealth</title>
 <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
@@ -32,7 +32,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca</a>
+                        <a class="nav-link" href="#Acerca">Acerca</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menu</a>
@@ -94,7 +94,7 @@
         </div>
     </header>
 
-    <section>
+    <section id="Acerca">
         <div class="container">
             <h1 class="my-4">FoodHealth
     <small>More Than One Family </small>
