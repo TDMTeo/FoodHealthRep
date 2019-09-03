@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>FoodHealth</title>
     <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
@@ -38,16 +38,15 @@
                         <a class="nav-link" href="#">Menu</a>
                     </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Perfil
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Perfil</a>
-                      <a class="dropdown-item" href="#">Notificaciones</a>
-                        <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="Cliente.aspx">Cerrar Sesion</a>
-                    </div>
-                  </li>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Notificaciones</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Cliente.aspx">Cerrar Sesion</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -61,25 +60,25 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                
+
                 <div class="carousel-item active" style="background-image: url('https://restauranteloscaballeros.com/wp-content/uploads/revslider/slider-inicio-2019/restaurante-0001.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="display-4">Food Health</h3>
                         <p class="lead">Actualmente hubicado en Cr 81ª #37d-25 - Medellín</p>
                     </div>
                 </div>
-                
+
                 <div class="carousel-item" style="background-image: url('https://www.aldelis.com/wp-content/uploads/2018/08/28-ag-18.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="display-4">Menu Especial</h3>
-                       <p class="lead"></p>
+                        <p class="lead"></p>
                     </div>
                 </div>
-                
+
                 <div class="carousel-item" style="background-image: url('https://cdn2.ticbeat.com/src/uploads/2018/08/alimentos-comer-todos-los-dias-810x518.jpg?x32709')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="display-4">Menu Mas Pedido</h3>
-                       <p class="lead"></p>
+                        <p class="lead"></p>
                     </div>
                 </div>
             </div>
@@ -97,51 +96,51 @@
     <br />
     <br />
     <section>
-    <div class="container">
-        <div class="row"> 
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="https://dea154aeb528bee620f5-799733fd03b9298a9f65fee6178f3d08.ssl.cf1.rackcdn.com/pix_5_0_0_5b4372eab090f.jpg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Lunes</h5>
-                        <div class="card-text text-black-50">Carne con...</div>
-                        <a href="#">mas...</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img src="https://dea154aeb528bee620f5-799733fd03b9298a9f65fee6178f3d08.ssl.cf1.rackcdn.com/pix_5_0_0_5b4372eab090f.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Lunes</h5>
+                            <div class="card-text text-black-50">Carne con...</div>
+                            <a href="#">mas...</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="https://www.clara.es/medio/2018/12/18/recetas-de-comida-saludable_8ca711d6_1200x630.jpg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Martes</h5>
-                        <div class="card-text text-black-50">Arroz Con..</div>
-                        <a href="#">mas...</a>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img src="https://www.clara.es/medio/2018/12/18/recetas-de-comida-saludable_8ca711d6_1200x630.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Martes</h5>
+                            <div class="card-text text-black-50">Arroz Con..</div>
+                            <a href="#">mas...</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="https://rec-end.elnuevodia.com/images/tn/0/71/942/539/900/447/2017/04/26/opcionesdecomidasaludable.jpg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Miercoles</h5>
-                        <div class="card-text text-black-50">Ensalada acompañada de...</div>
-                        <a href="#">mas...</a>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img src="https://rec-end.elnuevodia.com/images/tn/0/71/942/539/900/447/2017/04/26/opcionesdecomidasaludable.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Miercoles</h5>
+                            <div class="card-text text-black-50">Ensalada acompañada de...</div>
+                            <a href="#">mas...</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                    <img src="https://statics-cuidateplus.marca.com/sites/default/files/images/alimentos-saludables.jpg" class="card-img-top" alt="...">
-                    <div class="card-body text-center">
-                        <h5 class="card-title mb-0">Jueves</h5>
-                        <div class="card-text text-black-50">Pez Con...</div>
-                         <a href="#">mas...</a>
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-0 shadow">
+                        <img src="https://statics-cuidateplus.marca.com/sites/default/files/images/alimentos-saludables.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                            <h5 class="card-title mb-0">Jueves</h5>
+                            <div class="card-text text-black-50">Pez Con...</div>
+                            <a href="#">mas...</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-        </section>
+    </section>
     <footer>
         <div class="mt-5 pt-5 pb-5 footer">
             <div class="container">

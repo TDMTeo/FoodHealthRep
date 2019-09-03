@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModificarCliente.cs" />
     <Compile Include="Registrar_Admin.cs" />
     <Compile Include="Iniciar_Sesion.cs" />
     <Compile Include="Datos.designer.cs">

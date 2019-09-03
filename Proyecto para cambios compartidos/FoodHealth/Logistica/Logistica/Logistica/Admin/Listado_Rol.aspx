@@ -1,30 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Domiciliario.aspx.cs" Inherits="Logistica.Listado_Domiciliario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Rol.aspx.cs" Inherits="Logistica.Listado_Rol" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-<link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Roles</title>
+    <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
     <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
     <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
 
     <link href="plugins/animate.css/animate.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style1 {
-            height: 210px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="table-responsive">
             <table class="table table-active">
                 <tr>
-                    <td class="auto-style1">
+                    <td>
                         <asp:GridView ID="GvUsuarios" runat="server" OnSelectedIndexChanged="GvUsuarios_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
@@ -45,7 +40,7 @@
                 </tr>
             </table>
         </div>
-        <asp:Button ID="Button1" runat="server"  CssClass="btn btn-primary" Text="Refrescar" OnClick="Button1_Click" style="height: 26px" />
+        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Refrescar" OnClick="Button1_Click" Style="height: 26px" />
         <asp:Button ID="Button2" runat="server" CssClass="btn btn-primary" Text="Volver" OnClick="Button2_Click" />
     </form>
 

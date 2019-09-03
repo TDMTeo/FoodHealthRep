@@ -52,7 +52,7 @@ namespace Logistica
 
                     default:
                         Response.Write("<script> alert ('Error, Verifica bien tus datos. '); window.location = 'Inicio.aspx' </script>");
-                        Response.Redirect("Pruebas.aspx");
+                        Response.Redirect("Iniciar.aspx");
                         break;
                 }
 

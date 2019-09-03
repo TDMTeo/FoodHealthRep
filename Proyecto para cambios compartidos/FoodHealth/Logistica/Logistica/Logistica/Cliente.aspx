@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>FoodHealth</title>
-<link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
     <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
@@ -18,7 +18,7 @@
 
 </head>
 <body class="d-flex flex-column">
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand">Food Health</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,18 +36,18 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Menu</a>
-                    </li>`
+                    </li>
+                    `
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Perfil
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="Iniciar.aspx">Iniciar Sesion</a>
-                      <a class="dropdown-item" href="Registrarse.aspx">Registrarse</a>
-                        <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Recuperar Cuenta</a>
-                    </div>
-                  </li>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Iniciar.aspx">Iniciar Sesion</a>
+                            <a class="dropdown-item" href="Registrarse.aspx">Registrarse</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Recuperar Cuenta</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -61,25 +61,25 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
-                
+
                 <div class="carousel-item active" style="background-image: url('https://restauranteloscaballeros.com/wp-content/uploads/revslider/slider-inicio-2019/restaurante-0001.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="display-4">Food Health</h3>
                         <p class="lead">Actualmente hubicado en Cr 81ª #37d-25 - Medellín</p>
                     </div>
                 </div>
-                
+
                 <div class="carousel-item" style="background-image: url('https://www.aldelis.com/wp-content/uploads/2018/08/28-ag-18.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="display-4">Menu Especial</h3>
-                       <p class="lead"></p>
+                        <p class="lead"></p>
                     </div>
                 </div>
-                
+
                 <div class="carousel-item" style="background-image: url('https://cdn2.ticbeat.com/src/uploads/2018/08/alimentos-comer-todos-los-dias-810x518.jpg?x32709')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 class="display-4">Menu Mas Pedido</h3>
-                       <p class="lead"></p>
+                        <p class="lead"></p>
                     </div>
                 </div>
             </div>
@@ -105,8 +105,10 @@
                 </div>
                 <div class="col-md-4">
                     <h3 class="my-3">Mision</h3>
-                    <p>Satisfacer las necesidades gastronómicas de nuestros clientes, ofreciendo alimentos y servicios con la más alta calidad, donde se sobrepasen las expectativas de nuestros clientes y ser un espacio de trabajo que permita la realización personal y el Desarrollo de sus colaboradores en el grupo.
-Tomando como estrategia principal el mejoramiento continúo de los estrictos estándares de higiene y buen servicio en un ambiente seguro, agradable y familiar a un precio justo.</p>
+                    <p>
+                        Satisfacer las necesidades gastronómicas de nuestros clientes, ofreciendo alimentos y servicios con la más alta calidad, donde se sobrepasen las expectativas de nuestros clientes y ser un espacio de trabajo que permita la realización personal y el Desarrollo de sus colaboradores en el grupo.
+Tomando como estrategia principal el mejoramiento continúo de los estrictos estándares de higiene y buen servicio en un ambiente seguro, agradable y familiar a un precio justo.
+                    </p>
                     <h3 class="my-3">Vision</h3>
                     <p>“Ser el Mejor Restaurante a nivel Regional y nacional" Ser reconocido y preferido a nivel Regional y Nacional, como un grupo de trabajo original, sólido y profesional</p>
                 </div>
