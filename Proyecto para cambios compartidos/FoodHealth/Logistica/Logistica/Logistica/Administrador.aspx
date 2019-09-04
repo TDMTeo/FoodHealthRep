@@ -30,16 +30,21 @@
                     <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Admin/Agregar_Admi.aspx">Agregar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agregar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Admin/Agregar_Admi.aspx">Usuario</a>
+                            <a class="dropdown-item" href="Pedido.aspx">Pedido</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listados
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinke" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listados
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="Admin/Listado_Usuarios.aspx">Clientes</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Domiciliario.aspx">Domicilarios</a>
+                            <a class="dropdown-item" href="Admin/Listado_Domiciliario.aspx">Domicilarios</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Admin/Listado_Rol.aspx">Roles</a>
                         </div>
@@ -66,7 +71,7 @@
             </h1>
             <div class="row">
                 <div class="col-md-8">
-                    <img class="img-fluid" src="http://elespectadordigital.com/wp-content/uploads/2014/11/Ingresos.png" alt="">
+                    <img class="img-fluid" src="http://elespectadordigital.com/wp-content/uploads/2014/11/Ingresos.png" alt=""/>
                 </div>
 
                 <div class="col-md-4">

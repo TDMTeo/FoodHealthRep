@@ -12,7 +12,7 @@ namespace Clases
         public static Object ListaCliente()
         {
             DatosDataContext Conexion = new DatosDataContext();
-            var query = from u in Conexion.personas
+            var query = from u in Conexion.Cliente
                         select new
                         {
                             Rol = u.RolID,

@@ -42,6 +42,9 @@ namespace Clases
     partial void InsertDomiciliario(Domiciliario instance);
     partial void UpdateDomiciliario(Domiciliario instance);
     partial void DeleteDomiciliario(Domiciliario instance);
+    partial void InsertPedido(Pedido instance);
+    partial void UpdatePedido(Pedido instance);
+    partial void DeletePedido(Pedido instance);
     partial void Insertpersonas(personas instance);
     partial void Updatepersonas(personas instance);
     partial void Deletepersonas(personas instance);
@@ -106,6 +109,14 @@ namespace Clases
 			get
 			{
 				return this.GetTable<Domiciliario>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Pedido> Pedido
+		{
+			get
+			{
+				return this.GetTable<Pedido>();
 			}
 		}
 		
@@ -218,7 +229,7 @@ namespace Clases
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(45) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
 		public string Contraseña
 		{
 			get
@@ -535,7 +546,11 @@ namespace Clases
 		
 		private int _RolID;
 		
+		private System.Nullable<int> _PedidoID;
+		
 		private EntityRef<Rol> _Rol;
+		
+		private EntityRef<Pedido> _Pedido;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -555,11 +570,14 @@ namespace Clases
     partial void OnContraseñaChanged();
     partial void OnRolIDChanging(int value);
     partial void OnRolIDChanged();
+    partial void OnPedidoIDChanging(System.Nullable<int> value);
+    partial void OnPedidoIDChanged();
     #endregion
 		
 		public Cliente()
 		{
 			this._Rol = default(EntityRef<Rol>);
+			this._Pedido = default(EntityRef<Pedido>);
 			OnCreated();
 		}
 		
@@ -663,7 +681,7 @@ namespace Clases
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(45) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
 		public string Contraseña
 		{
 			get
@@ -707,6 +725,30 @@ namespace Clases
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PedidoID", DbType="Int")]
+		public System.Nullable<int> PedidoID
+		{
+			get
+			{
+				return this._PedidoID;
+			}
+			set
+			{
+				if ((this._PedidoID != value))
+				{
+					if (this._Pedido.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPedidoIDChanging(value);
+					this.SendPropertyChanging();
+					this._PedidoID = value;
+					this.SendPropertyChanged("PedidoID");
+					this.OnPedidoIDChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Rol_Cliente", Storage="_Rol", ThisKey="RolID", OtherKey="RolID", IsForeignKey=true)]
 		public Rol Rol
 		{
@@ -737,6 +779,40 @@ namespace Clases
 						this._RolID = default(int);
 					}
 					this.SendPropertyChanged("Rol");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pedido_Cliente", Storage="_Pedido", ThisKey="PedidoID", OtherKey="PedidoID", IsForeignKey=true)]
+		public Pedido Pedido
+		{
+			get
+			{
+				return this._Pedido.Entity;
+			}
+			set
+			{
+				Pedido previousValue = this._Pedido.Entity;
+				if (((previousValue != value) 
+							|| (this._Pedido.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Pedido.Entity = null;
+						previousValue.Cliente1.Remove(this);
+					}
+					this._Pedido.Entity = value;
+					if ((value != null))
+					{
+						value.Cliente1.Add(this);
+						this._PedidoID = value.PedidoID;
+					}
+					else
+					{
+						this._PedidoID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Pedido");
 				}
 			}
 		}
@@ -780,7 +856,11 @@ namespace Clases
 		
 		private int _RolID;
 		
+		private System.Nullable<int> _PedidoID;
+		
 		private EntityRef<Rol> _Rol;
+		
+		private EntityRef<Pedido> _Pedido;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -798,11 +878,14 @@ namespace Clases
     partial void OnContraseñaChanged();
     partial void OnRolIDChanging(int value);
     partial void OnRolIDChanged();
+    partial void OnPedidoIDChanging(System.Nullable<int> value);
+    partial void OnPedidoIDChanged();
     #endregion
 		
 		public Domiciliario()
 		{
 			this._Rol = default(EntityRef<Rol>);
+			this._Pedido = default(EntityRef<Pedido>);
 			OnCreated();
 		}
 		
@@ -886,7 +969,7 @@ namespace Clases
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(45) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
 		public string Contraseña
 		{
 			get
@@ -930,6 +1013,30 @@ namespace Clases
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PedidoID", DbType="Int")]
+		public System.Nullable<int> PedidoID
+		{
+			get
+			{
+				return this._PedidoID;
+			}
+			set
+			{
+				if ((this._PedidoID != value))
+				{
+					if (this._Pedido.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnPedidoIDChanging(value);
+					this.SendPropertyChanging();
+					this._PedidoID = value;
+					this.SendPropertyChanged("PedidoID");
+					this.OnPedidoIDChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Rol_Domiciliario", Storage="_Rol", ThisKey="RolID", OtherKey="RolID", IsForeignKey=true)]
 		public Rol Rol
 		{
@@ -964,6 +1071,40 @@ namespace Clases
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pedido_Domiciliario", Storage="_Pedido", ThisKey="PedidoID", OtherKey="PedidoID", IsForeignKey=true)]
+		public Pedido Pedido
+		{
+			get
+			{
+				return this._Pedido.Entity;
+			}
+			set
+			{
+				Pedido previousValue = this._Pedido.Entity;
+				if (((previousValue != value) 
+							|| (this._Pedido.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Pedido.Entity = null;
+						previousValue.Domiciliario1.Remove(this);
+					}
+					this._Pedido.Entity = value;
+					if ((value != null))
+					{
+						value.Domiciliario1.Add(this);
+						this._PedidoID = value.PedidoID;
+					}
+					else
+					{
+						this._PedidoID = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Pedido");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -982,6 +1123,220 @@ namespace Clases
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Pedido")]
+	public partial class Pedido : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _PedidoID;
+		
+		private string _Descripcion;
+		
+		private string _Domiciliario;
+		
+		private string _Cliente;
+		
+		private string _Direccion;
+		
+		private EntitySet<Cliente> _Cliente1;
+		
+		private EntitySet<Domiciliario> _Domiciliario1;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPedidoIDChanging(int value);
+    partial void OnPedidoIDChanged();
+    partial void OnDescripcionChanging(string value);
+    partial void OnDescripcionChanged();
+    partial void OnDomiciliarioChanging(string value);
+    partial void OnDomiciliarioChanged();
+    partial void OnClienteChanging(string value);
+    partial void OnClienteChanged();
+    partial void OnDireccionChanging(string value);
+    partial void OnDireccionChanged();
+    #endregion
+		
+		public Pedido()
+		{
+			this._Cliente1 = new EntitySet<Cliente>(new Action<Cliente>(this.attach_Cliente1), new Action<Cliente>(this.detach_Cliente1));
+			this._Domiciliario1 = new EntitySet<Domiciliario>(new Action<Domiciliario>(this.attach_Domiciliario1), new Action<Domiciliario>(this.detach_Domiciliario1));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PedidoID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int PedidoID
+		{
+			get
+			{
+				return this._PedidoID;
+			}
+			set
+			{
+				if ((this._PedidoID != value))
+				{
+					this.OnPedidoIDChanging(value);
+					this.SendPropertyChanging();
+					this._PedidoID = value;
+					this.SendPropertyChanged("PedidoID");
+					this.OnPedidoIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(45)")]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this.OnDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._Descripcion = value;
+					this.SendPropertyChanged("Descripcion");
+					this.OnDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Domiciliario", DbType="VarChar(45)")]
+		public string Domiciliario
+		{
+			get
+			{
+				return this._Domiciliario;
+			}
+			set
+			{
+				if ((this._Domiciliario != value))
+				{
+					this.OnDomiciliarioChanging(value);
+					this.SendPropertyChanging();
+					this._Domiciliario = value;
+					this.SendPropertyChanged("Domiciliario");
+					this.OnDomiciliarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cliente", DbType="VarChar(45) NOT NULL", CanBeNull=false)]
+		public string Cliente
+		{
+			get
+			{
+				return this._Cliente;
+			}
+			set
+			{
+				if ((this._Cliente != value))
+				{
+					this.OnClienteChanging(value);
+					this.SendPropertyChanging();
+					this._Cliente = value;
+					this.SendPropertyChanged("Cliente");
+					this.OnClienteChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Direccion", DbType="VarChar(45) NOT NULL", CanBeNull=false)]
+		public string Direccion
+		{
+			get
+			{
+				return this._Direccion;
+			}
+			set
+			{
+				if ((this._Direccion != value))
+				{
+					this.OnDireccionChanging(value);
+					this.SendPropertyChanging();
+					this._Direccion = value;
+					this.SendPropertyChanged("Direccion");
+					this.OnDireccionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pedido_Cliente", Storage="_Cliente1", ThisKey="PedidoID", OtherKey="PedidoID")]
+		public EntitySet<Cliente> Cliente1
+		{
+			get
+			{
+				return this._Cliente1;
+			}
+			set
+			{
+				this._Cliente1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Pedido_Domiciliario", Storage="_Domiciliario1", ThisKey="PedidoID", OtherKey="PedidoID")]
+		public EntitySet<Domiciliario> Domiciliario1
+		{
+			get
+			{
+				return this._Domiciliario1;
+			}
+			set
+			{
+				this._Domiciliario1.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Cliente1(Cliente entity)
+		{
+			this.SendPropertyChanging();
+			entity.Pedido = this;
+		}
+		
+		private void detach_Cliente1(Cliente entity)
+		{
+			this.SendPropertyChanging();
+			entity.Pedido = null;
+		}
+		
+		private void attach_Domiciliario1(Domiciliario entity)
+		{
+			this.SendPropertyChanging();
+			entity.Pedido = this;
+		}
+		
+		private void detach_Domiciliario1(Domiciliario entity)
+		{
+			this.SendPropertyChanging();
+			entity.Pedido = null;
 		}
 	}
 	
@@ -1133,7 +1488,7 @@ namespace Clases
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(45) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contraseña", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
 		public string Contraseña
 		{
 			get

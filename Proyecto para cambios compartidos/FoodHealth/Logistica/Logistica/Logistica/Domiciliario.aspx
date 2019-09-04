@@ -58,7 +58,7 @@
             </h1>
             <div class="row">
                 <div class="col-md-8">
-                    <img class="img-fluid" src="https://d2yoo3qu6vrk5d.cloudfront.net/images/20180810085848/gettyimages-8114788701-482x320.jpg" alt="">
+                    <img class="img-fluid" src="https://d2yoo3qu6vrk5d.cloudfront.net/images/20180810085848/gettyimages-8114788701-482x320.jpg" alt=""/>
                 </div>
                 <div class="col-md-4">
                     <h3 class="my-3">Domicilios Realizados</h3>

@@ -96,7 +96,7 @@
     <Content Include="plugins\sweetAlert2\sweetalert2.min.css" />
     <Content Include="popper\popper.min.js" />
     <Content Include="Admin\Agregar_Admi.aspx" />
-    <Content Include="Pruebas.aspx" />
+    <Content Include="Pedido.aspx" />
     <Content Include="Registrarse.aspx" />
     <Content Include="Usuario.aspx" />
     <Content Include="Web.config" />
@@ -159,12 +159,12 @@
     <Compile Include="Admin\Agregar_Admi.aspx.designer.cs">
       <DependentUpon>Agregar_Admi.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pruebas.aspx.cs">
-      <DependentUpon>Pruebas.aspx</DependentUpon>
+    <Compile Include="Pedido.aspx.cs">
+      <DependentUpon>Pedido.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pruebas.aspx.designer.cs">
-      <DependentUpon>Pruebas.aspx</DependentUpon>
+    <Compile Include="Pedido.aspx.designer.cs">
+      <DependentUpon>Pedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="Registrarse.aspx.cs">
       <DependentUpon>Registrarse.aspx</DependentUpon>

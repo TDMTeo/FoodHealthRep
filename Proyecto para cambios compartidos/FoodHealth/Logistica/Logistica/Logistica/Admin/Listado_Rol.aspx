@@ -6,16 +6,63 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Roles</title>
-    <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
-    <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../bootstrap4/css/bootstrap.css" rel="stylesheet" />
+    <link href="../bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
-    <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
-    <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
 
-    <link href="plugins/animate.css/animate.css" rel="stylesheet" />
+    <link href="../plugins/animate.css/animate.css" rel="stylesheet" />
 </head>
 <body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand">Food Health</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto flex-row w-100">
+                    <li class="nav-item px-2 mr-auto active ">
+                        <a class="nav-link" href="../Administrador.aspx">Inicio
+                    <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agregar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Agregar_Admi.aspx">Usuario</a>
+                            <a class="dropdown-item" href="../Pedido.aspx">Pedido</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinke" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listados
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="Listado_Usuarios.aspx">Clientes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Listado_Domiciliario.aspx">Domicilarios</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Listado_Rol.aspx">Roles</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Notificaciones</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="../Cliente.aspx">Cerrar Sesion</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <form id="form1" runat="server">
+        <div class="container" style="width: 730px;">
         <div class="table-responsive">
             <table class="table table-active">
                 <tr>
@@ -40,13 +87,12 @@
                 </tr>
             </table>
         </div>
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary" Text="Refrescar" OnClick="Button1_Click" Style="height: 26px" />
-        <asp:Button ID="Button2" runat="server" CssClass="btn btn-primary" Text="Volver" OnClick="Button2_Click" />
+      </div>
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="popper/popper.min.js"></script>
-    <script src="bootstrap4/js/bootstrap.min.js"></script>
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+    <script src="../popper/popper.min.js"></script>
+    <script src="../bootstrap4/js/bootstrap.min.js"></script>
 </body>
 </html>

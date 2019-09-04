@@ -32,7 +32,7 @@ namespace Logistica
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Administrador.aspx");
+            Response.Redirect("../Administrador.aspx");
         }
     }
 }

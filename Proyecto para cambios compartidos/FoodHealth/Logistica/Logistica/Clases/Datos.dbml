@@ -5,7 +5,7 @@
       <Column Name="AdministradorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Documento" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Rol_Administrador" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
     </Type>
@@ -27,9 +27,11 @@
       <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PedidoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Rol_Cliente" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
+      <Association Name="Pedido_Cliente" Member="Pedido" ThisKey="PedidoID" OtherKey="PedidoID" Type="Pedido" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Domiciliario" Member="Domiciliario">
@@ -38,9 +40,22 @@
       <Column Name="Documento" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
-      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PedidoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Rol_Domiciliario" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
+      <Association Name="Pedido_Domiciliario" Member="Pedido" ThisKey="PedidoID" OtherKey="PedidoID" Type="Pedido" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Pedido" Member="Pedido">
+    <Type Name="Pedido">
+      <Column Name="PedidoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+      <Column Name="Domiciliario" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+      <Column Name="Cliente" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Association Name="Pedido_Cliente" Member="Cliente1" ThisKey="PedidoID" OtherKey="PedidoID" Type="Cliente" />
+      <Association Name="Pedido_Domiciliario" Member="Domiciliario1" ThisKey="PedidoID" OtherKey="PedidoID" Type="Domiciliario" />
     </Type>
   </Table>
   <Table Name="dbo.personas" Member="personas">
@@ -50,7 +65,7 @@
       <Column Name="Correo" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
       <Column Name="Direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Contraseña" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="RolID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Rol_personas" Member="Rol" ThisKey="RolID" OtherKey="RolID" Type="Rol" IsForeignKey="true" />
     </Type>

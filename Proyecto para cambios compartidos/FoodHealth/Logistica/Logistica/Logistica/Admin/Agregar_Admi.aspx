@@ -6,14 +6,14 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Agregar</title>
-    <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
-    <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="../bootstrap4/css/bootstrap.css" rel="stylesheet" />
+    <link href="../bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
-    <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
-    <link href="plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
 
-    <link href="css/Iniciar.css" rel="stylesheet" />
-    <link href="plugins/animate.css/animate.css" rel="stylesheet" />
+    <link href="../css/Iniciar.css" rel="stylesheet" />
+    <link href="../plugins/animate.css/animate.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -69,8 +69,8 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="jquery/jquery-3.3.1.min.js"></script>
-    <script src="popper/popper.min.js"></script>
-    <script src="bootstrap4/js/bootstrap.min.js"></script>
+    <script src="../jquery/jquery-3.3.1.min.js"></script>
+    <script src="../popper/popper.min.js"></script>
+    <script src="../bootstrap4/js/bootstrap.min.js"></script>
 </body>
 </html>

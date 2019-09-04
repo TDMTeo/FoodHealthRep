@@ -1,5 +1,5 @@
-
-use Prueba7
+create database Prueba4
+use Prueba4
 create table Rol (
 RolID int identity not null, 
 NombreRol varchar(45) not null, 
@@ -19,7 +19,7 @@ create table Administrador (
 AdministradorID int identity not null, 
 Documento varchar(45)  not null unique, 
 Nombre varchar(45) not null unique, 
-Contraseña varchar(25) not null,  
+Contraseña varchar(10) not null,  
 RolID int not null, 
 constraint PK_Primary_Administrador primary key (AdministradorID),
 constraint FK_Administrador_Rol foreign key (RolID) references Rol (RolID)
@@ -31,7 +31,7 @@ Documento varchar(45)  not null unique,
 Correo varchar(50) not null unique, 
 Nombre varchar(45) not null, 
 Direccion varchar(50) not null, 
-Contraseña varchar(25) not null,
+Contraseña varchar(10) not null,
 RolID int not null,
 PedidoID int,
 constraint PK_Primary_Cliente Primary key (ClienteID), 
@@ -44,7 +44,7 @@ DomiciliarioID int identity not null,
 Documento varchar(45)  not null unique, 
 Correo varchar(50) not null unique, 
 Nombre varchar(45) not null, 
-Contraseña varchar(25) not null ,
+Contraseña varchar(10) not null ,
 RolID int not null,
 PedidoID int,
 constraint PK_Primary_Domiciliario Primary key (DomiciliarioID), 
@@ -58,7 +58,7 @@ Documento varchar(45)  not null unique,
 Correo varchar(45) not null unique, 
 Nombre varchar(45) not null, 
 Direccion varchar(50) not null,  
-Contraseña varchar(25) not null ,
+Contraseña varchar(10) not null ,
 RolID int not null,
 constraint PK_Primary_Persona Primary key (PersonaID), 
 constraint FK_Persona_Rol foreign key (RolID)  references Rol (RolID)
