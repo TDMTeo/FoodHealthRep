@@ -54,6 +54,20 @@ namespace Clases
 
         }
 
+        public static Object ListaPedidos()
+        {
+            DatosDataContext Conexion = new DatosDataContext();
+            var query = from u in Conexion.Pedido
+                        select new
+                        {
+                            Cliente = u.Cliente,
+                            Domiciliario = u.Domiciliario,
+                            Direccion = u.Direccion,
+                            Descripcion = u.Descripcion
+                        };
+               return query;
+        }
+
 
     }
 }

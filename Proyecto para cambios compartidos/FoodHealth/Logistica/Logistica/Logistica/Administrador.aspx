@@ -47,6 +47,8 @@
                             <a class="dropdown-item" href="Admin/Listado_Domiciliario.aspx">Domicilarios</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Admin/Listado_Rol.aspx">Roles</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Admin/Listado_Pedidos.aspx">Pedidos</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

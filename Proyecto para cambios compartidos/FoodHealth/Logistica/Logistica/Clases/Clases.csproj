@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Agregar_Pedido.cs" />
     <Compile Include="ModificarCliente.cs" />
+    <Compile Include="ModificarPedido.cs" />
     <Compile Include="Registrar_Admin.cs" />
     <Compile Include="Iniciar_Sesion.cs" />
     <Compile Include="Datos.designer.cs">

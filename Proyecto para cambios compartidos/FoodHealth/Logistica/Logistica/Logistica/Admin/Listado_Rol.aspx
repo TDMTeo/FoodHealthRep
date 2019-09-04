@@ -45,6 +45,8 @@
                             <a class="dropdown-item" href="Listado_Domiciliario.aspx">Domicilarios</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Listado_Rol.aspx">Roles</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="Listado_Pedidos.aspx">Pedidos</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -61,8 +63,11 @@
             </div>
         </div>
     </nav>
+    <br />
+    <br />
+    <br />
     <form id="form1" runat="server">
-        <div class="container" style="width: 730px;">
+        <div class="container" style="width: 310px;">
         <div class="table-responsive">
             <table class="table table-active">
                 <tr>

@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador.aspx" />
+    <Content Include="Admin\Listado_Pedidos.aspx" />
     <Content Include="bootstrap4\css\bootstrap-grid.css" />
     <Content Include="bootstrap4\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap4\css\bootstrap-reboot.css" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="Administrador.aspx.designer.cs">
       <DependentUpon>Administrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Listado_Pedidos.aspx.cs">
+      <DependentUpon>Listado_Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Listado_Pedidos.aspx.designer.cs">
+      <DependentUpon>Listado_Pedidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cliente.aspx.cs">
       <DependentUpon>Cliente.aspx</DependentUpon>
