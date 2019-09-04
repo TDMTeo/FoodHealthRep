@@ -26,7 +26,7 @@ namespace Clases
             return query;
         }
 
-        public static Object ListaDomiciliario(string nombre, int Rol)
+        public static Object ListaDomiciliario()
         {
             DatosDataContext Conexion = new DatosDataContext();
             var query = from u in Conexion.Domiciliario

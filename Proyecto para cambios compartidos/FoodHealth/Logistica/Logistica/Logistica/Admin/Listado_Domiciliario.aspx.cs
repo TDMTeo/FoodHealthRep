@@ -10,33 +10,75 @@ namespace Logistica
 {
     public partial class Listado_Domiciliario : System.Web.UI.Page
     {
-        public string nombre;
-        public int Rol;
         protected void Page_Load(object sender, EventArgs e)
         {
-            GvUsuarios.DataSource = Mostrar.ListaDomiciliario(nombre,Rol);
+            Lista();
+            OcultarDiv();
+        }
+
+        private void OcultarDiv()
+        {
+            Modificar.Visible = false;
+        }
+
+        protected void Lista()
+        {
+            GvUsuarios.DataSource = Mostrar.ListaDomiciliario();
             GvUsuarios.DataBind();
         }
 
         protected void GvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GvUsuarios.DataSource = Mostrar.ListaDomiciliario(nombre, Rol);
-            GvUsuarios.DataBind();
-            //GridViewRow fila = GvUsuarios.SelectedRow;
-            //String nombre = fila.Cells[2].Text;
-            Response.Write("<script>alert(" + Rol + ""+ ")</script>");
+            GridViewRow fila = GvUsuarios.SelectedRow;
+            hdDocumento.Value = fila.Cells[2].Text;
+            Campos();
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            int DomiciliarioID = int.Parse(hdClientesID.Value);
+            string Email = txtEmail.Text;
+            string Clave = txtContra.Text;
+            string Documento = txtDocumento.Text;
+            string Nombre = txtNombre.Text;
+
+
+            int Registro = ModificarDomiciliario.RegistrarDomi(DomiciliarioID, Documento, Email, Nombre, Clave);
+
+            if (Registro == 3)
+            {
+                Response.Write("<script>alert('Empleado modificado')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Ocurrió un error al modificarse')</script>");
+            }
+
+            Limpiar();
+            OcultarDiv();
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        public void Limpiar()
         {
-            GvUsuarios.DataSource = Mostrar.ListaDomiciliario(nombre, Rol);
-            GvUsuarios.DataBind();
+            txtEmail.Text = string.Empty;
+            txtContra.Text = string.Empty;
+            txtDocumento.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        private void Campos()
         {
-            Response.Redirect("../Administrador.aspx");
+            string Documento = hdDocumento.Value;
+            Domiciliario domiciliario = ModificarDomiciliario.BuscarPorCedula(Documento);
+            hdClientesID.Value = domiciliario.DomiciliarioID.ToString();
+            txtEmail.Text = domiciliario.Correo;
+            txtContra.Text = domiciliario.Contraseña;
+            txtDocumento.Text = domiciliario.Documento;
+            txtNombre.Text = domiciliario.Nombre;
+
+            Modificar.Visible = true;
         }
     }
 }
