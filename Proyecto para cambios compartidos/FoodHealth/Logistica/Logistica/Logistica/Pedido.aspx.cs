@@ -36,7 +36,7 @@ namespace Logistica
 
                 if (resultado == 1)
                 {
-                    Response.Write("<script>alert('Usuario ya existente')</script>");
+                    Response.Write("<script>alert('Cliente No Existente')</script>");
                 }
                 else
                     if (resultado == 2)

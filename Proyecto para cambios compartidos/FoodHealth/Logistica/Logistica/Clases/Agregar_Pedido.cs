@@ -32,6 +32,10 @@ namespace Clases
 
             if (persona == null)
             {
+                resultado = 1;
+            }
+            else
+            {
                 pedido.Cliente = Cliente;
                 pedido.Domiciliario = Domi;
                 pedido.Direccion = Direccion;
@@ -47,11 +51,6 @@ namespace Clases
                 {
                     resultado = 2;
                 }
-
-            }
-            else
-            {
-                resultado = 1;
             }
 
             return resultado;
