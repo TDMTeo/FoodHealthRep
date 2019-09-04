@@ -87,7 +87,7 @@
     <Content Include="jquery\Iniciar.js" />
     <Content Include="Iniciar.aspx" />
     <Content Include="jquery\jquery-3.3.1.min.js" />
-    <Content Include="Admin\Listado_Usuarios.aspx" />
+    <Content Include="Admin\Listado_Cliente.aspx" />
     <Content Include="Admin\Listado_Domiciliario.aspx" />
     <Content Include="Admin\Listado_Rol.aspx" />
     <Content Include="js\modal.js" />
@@ -123,12 +123,12 @@
     <Compile Include="Domiciliario.aspx.designer.cs">
       <DependentUpon>Domiciliario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Listado_Usuarios.aspx.cs">
-      <DependentUpon>Listado_Usuarios.aspx</DependentUpon>
+    <Compile Include="Admin\Listado_Cliente.aspx.cs">
+      <DependentUpon>Listado_Cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Listado_Usuarios.aspx.designer.cs">
-      <DependentUpon>Listado_Usuarios.aspx</DependentUpon>
+    <Compile Include="Admin\Listado_Cliente.aspx.designer.cs">
+      <DependentUpon>Listado_Cliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Listado_Domiciliario.aspx.cs">
       <DependentUpon>Listado_Domiciliario.aspx</DependentUpon>

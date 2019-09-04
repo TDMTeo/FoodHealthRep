@@ -21,7 +21,7 @@ namespace Clases
             return persona;
         }
 
-        public static int RegistrarUsuario(string Documento, string Correo, string Nombre, string Direccion, string contraseña)
+        public static int RegistrarUsuario(string Documento, string Correo, string Nombre, string Direccion, string contraseña, int Rol)
         {
             int resultado = 0;
 
@@ -36,7 +36,7 @@ namespace Clases
                 persona.Nombre = Nombre;
                 persona.Direccion = Direccion;
                 persona.Contraseña = contraseña;
-                persona.RolID = 1;
+                persona.RolID = Rol;
 
                 try
                 {

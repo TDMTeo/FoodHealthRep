@@ -46,7 +46,7 @@
                             <div class="custom-control custom-checkbox mb-3">
                                 <asp:CheckBox ID="customCheck1" CssClass="custom-control-input" runat="server" Text="Recordar Contraseña" />
                             </div>
-                            <asp:Button ID="Button1" CssClass="btn btn-lg btn btn-light btn-block text-uppercase" runat="server" Text="Guardar" />
+                            <asp:Button ID="Button1" CssClass="btn btn-lg btn btn-light btn-block text-uppercase" runat="server" Text="Guardar" OnClick="Button1_Click" />
                             <hr class="my-4" />
                             <asp:Button ID="Button2" CssClass="btn btn-lg btn-google btn-block text-uppercase" runat="server" Text="Volver" OnClick="Button2_Click" />
                         </form>

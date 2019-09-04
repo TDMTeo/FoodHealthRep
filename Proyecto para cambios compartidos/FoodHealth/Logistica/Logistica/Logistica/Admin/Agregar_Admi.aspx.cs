@@ -28,6 +28,7 @@ namespace Logistica
             {
                 Rol = 1;
                 int resultado = Registrar_Cliente.RegistrarCliente(Documento, Correo, Nombre, Direccion, contraseña, Rol);
+                 resultado = Registrar_Usuario.RegistrarUsuario(Documento, Correo, Nombre, Direccion, contraseña, Rol);
 
                 if (resultado == 1)
                 {
@@ -42,11 +43,13 @@ namespace Logistica
                 {
                     Response.Write("<script>alert('Registro Exitoso')</script>");
                 }
+                
             }
             if (RadioAdmin.Checked == true)
             {
                 Rol = 2;
                 int resultado = Registrar_Domi.RegistrarDomi(Documento, Correo, Nombre, contraseña, Rol);
+                resultado = Registrar_Usuario.RegistrarUsuario(Documento, Correo, Nombre, Direccion, contraseña, Rol);
 
                 if (resultado == 1)
                 {

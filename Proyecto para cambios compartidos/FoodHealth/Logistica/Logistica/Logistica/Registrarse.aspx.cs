@@ -28,8 +28,8 @@ namespace Logistica
                 String Nombre = txtNombre.Text;
                 String Direccion = txtDireccion.Text;
                 String Contraseña = txtContra.Text;
-
-                int resultado = Registrar_Usuario.RegistrarUsuario(Documento, Correo, Nombre, Direccion, Contraseña);
+                int Rol = 1; 
+                int resultado = Registrar_Usuario.RegistrarUsuario(Documento, Correo, Nombre, Direccion, Contraseña,Rol);
 
                 if (resultado == 1)
                 {

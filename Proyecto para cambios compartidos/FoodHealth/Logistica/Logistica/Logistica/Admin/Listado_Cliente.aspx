@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Usuarios.aspx.cs" Inherits="Logistica.Listado_Clientes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Cliente.aspx.cs" Inherits="Logistica.Listado_Clientes" %>
 
 <!DOCTYPE html>
 
@@ -41,7 +41,7 @@
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinke" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listados
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="Listado_Usuarios.aspx">Clientes</a>
+                            <a class="dropdown-item" href="Listado_Cliente.aspx">Clientes</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Listado_Domiciliario.aspx">Domicilarios</a>
                             <div class="dropdown-divider"></div>
@@ -62,8 +62,10 @@
             </div>
         </div>
     </nav>
+    <br />
+    <br />
     <form id="form1" runat="server">
-    <div class="container" style="width: 730px;">
+    <div class="container" style="width: 750px;">
         <div class="table-responsive">
             <table class="table table-active">
                 <tr>
@@ -71,7 +73,7 @@
                         <asp:GridView ID="GvUsuarios" runat="server" OnSelectedIndexChanged="GvUsuarios_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
-                                <asp:ButtonField ButtonType="Button"  CommandName="Select" HeaderText="Rol" ShowHeader="True" Text="Select" />
+                                <asp:ButtonField ButtonType="Button"  CommandName="Select" HeaderText="Modificar" ShowHeader="True" Text="Seleccionar" />
                             </Columns>
                             <EditRowStyle BackColor="#999999" />
                             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -89,8 +91,8 @@
             </table>
         </div>
     </div>
-     <div runat="server" id="Modificar" class="container">
-         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+     <div runat="server" id="Modificar" class="container" style="width: 760px;">
+         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
             Modificar
         </button>
         <!-- Modal -->

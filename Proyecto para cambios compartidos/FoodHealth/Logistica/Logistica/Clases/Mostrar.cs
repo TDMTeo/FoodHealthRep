@@ -12,7 +12,7 @@ namespace Clases
         public static Object ListaCliente()
         {
             DatosDataContext Conexion = new DatosDataContext();
-            var query = from u in Conexion.Cliente
+            var query = from u in Conexion.personas
                         select new
                         {
                             Rol = u.RolID,
@@ -20,6 +20,7 @@ namespace Clases
                             Nombre = u.Nombre,
                             Correo = u.Correo,
                             Direccion = u.Direccion
+
                         };
 
             return query;
