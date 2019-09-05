@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Agregar Pedido</title>
-    
+
     <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
@@ -17,7 +17,7 @@
     <link href="plugins/animate.css/animate.css" rel="stylesheet" />
 </head>
 <body>
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="popper/popper.min.js"></script>
     <script src="bootstrap4/js/bootstrap.min.js"></script>

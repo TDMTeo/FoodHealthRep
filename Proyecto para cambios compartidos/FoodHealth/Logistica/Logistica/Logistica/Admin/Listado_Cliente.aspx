@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Cliente.aspx.cs" Inherits="Logistica.Listado_Clientes" %>
+﻿c<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Cliente.aspx.cs" Inherits="Logistica.Listado_Clientes" %>
 
 <!DOCTYPE html>
 
@@ -10,13 +10,13 @@
     <link href="../bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
     <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
-    <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" /> 
+    <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
 
-        <link href="../css/Iniciar.css" rel="stylesheet" />
+    <link href="../css/Iniciar.css" rel="stylesheet" />
     <link href="../plugins/animate.css/animate.css" rel="stylesheet" />
 </head>
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand">Food Health</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                             <a class="dropdown-item" href="Listado_Domiciliario.aspx">Domicilarios</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Listado_Rol.aspx">Roles</a>
-                           <div class="dropdown-divider"></div>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="Listado_Pedidos.aspx">Pedidos</a>
                         </div>
                     </li>
@@ -67,36 +67,40 @@
     <br />
     <br />
     <form id="form1" runat="server">
-    <div class="container" style="width: 750px;">
-        <div class="table-responsive">
-            <table class="table table-active">
-                <tr>
-                    <td>
-                        <asp:GridView ID="GvUsuarios" runat="server" OnSelectedIndexChanged="GvUsuarios_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
-                            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                            <Columns>
-                                <asp:ButtonField ButtonType="Button"  CommandName="Select" HeaderText="Modificar" ShowHeader="True" Text="Seleccionar" />
-                            </Columns>
-                            <EditRowStyle BackColor="#999999" />
-                            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                        </asp:GridView>
-                    </td>
-                </tr>
-            </table>
+        <div class="container" style="width: 750px;">
+            <div class="table-responsive">
+                <table class="table table-active">
+                    <tr>
+                        <td>
+                            <asp:GridView ID="GvUsuarios" runat="server" OnSelectedIndexChanged="GvUsuarios_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                <Columns>
+                                    <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Modificar" ShowHeader="True" Text="Seleccionar" />
+                                </Columns>
+                                <EditRowStyle BackColor="#999999" />
+                                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                            </asp:GridView>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </div>
-     <div runat="server" id="Modificar" class="container" style="width: 760px;">
-         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-            Modificar
-        </button>
+        <div runat="server" id="Modificar" class="container" style="width: 760px;">
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Modificar</button>
+                <div style="text-align: right; width: 700px">
+                    <asp:Button ID="btnEliminar" runat="server" CssClass="btn btn-outline-light" Text="Eliminar" OnClick="btnEliminar_Click" />
+                </div>
+            </div>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
@@ -108,7 +112,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                        
+
                     <div class="card-body">
                         <div class="form-label-group">
                             <asp:TextBox ID="txtDocumento" CssClass="form-control" TextMode="Number" runat="server"></asp:TextBox>
@@ -137,12 +141,12 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                         <asp:Button ID="btnModificar" CssClass="btn btn-outline-primary" runat="server" Text="Aceptar" OnClick="btnModificar_Click" />
+                        <asp:Button ID="btnModificar" CssClass="btn btn-outline-primary" runat="server" Text="Aceptar" OnClick="btnModificar_Click" />
                     </div>
                 </div>
             </div>
         </div>
-         </div>
+
 
     </form>
 

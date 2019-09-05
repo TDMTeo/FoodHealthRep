@@ -65,7 +65,9 @@
             </div>
         </div>
     </nav>
-    <br /><br /> <br />
+    <br />
+    <br />
+    <br />
     <section>
         <div class="container">
             <h1 class="my-4">FoodHealth
@@ -73,7 +75,7 @@
             </h1>
             <div class="row">
                 <div class="col-md-8">
-                    <img class="img-fluid" src="http://elespectadordigital.com/wp-content/uploads/2014/11/Ingresos.png" alt=""/>
+                    <img class="img-fluid" src="http://elespectadordigital.com/wp-content/uploads/2014/11/Ingresos.png" alt="" />
                 </div>
 
                 <div class="col-md-4">

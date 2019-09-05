@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Pedidos.aspx.cs" Inherits="Logistica.Admin.Listado_Pedidos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Listado_Pedidos_Domiciliario.aspx.cs" Inherits="Logistica.Listado_Pedidos_Domiciliario" %>
 
 <!DOCTYPE html>
 
@@ -24,47 +24,31 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto flex-row w-100">
-                    <li class="nav-item px-2 mr-auto active ">
-                        <a class="nav-link" href="../Administrador.aspx">Inicio
+                    <li class="nav-item px-2 mr-auto active">
+                        <a class="nav-link" href="Domiciliario.aspx">Inicio
                     <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Agregar
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="Agregar_Admi.aspx">Usuario</a>
-                            <a class="dropdown-item" href="../Pedido.aspx">Pedido</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Listado_Pedidos_Domiciliario.aspx">Pedidos</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLinke" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listados
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="Listado_Cliente.aspx">Clientes</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Listado_Domiciliario.aspx">Domicilarios</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Listado_Rol.aspx">Roles</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="Listado_Pedidos.aspx">Pedidos</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Listado_Pedidos_Domiciliario.aspx">Rutas</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Perfil</a>
-                            <a class="dropdown-item" href="#">Notificaciones</a>
+                            <a class="dropdown-item" href="Iniciar.aspx">Perfil</a>
+                            <a class="dropdown-item" href="Registrarse.aspx">Notificaciones</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../Cliente.aspx">Cerrar Sesion</a>
+                            <a class="dropdown-item" href="Cliente.aspx">Cerrar Sesion</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <br />
     <br />
     <br />
     <br />
@@ -98,9 +82,6 @@
         <div runat="server" id="Modificar" class="container" style="width: 760px;">
             <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
                 Modificar</button>
-            <div style="text-align: right; width: 650px">
-                <asp:Button ID="btnEliminar" runat="server" CssClass="btn btn-outline-light" Text="Eliminar" OnClick="btnEliminar_Click" />
-            </div>
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 

@@ -5,10 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Clases;
-
-namespace Logistica.Admin
+namespace Logistica
 {
-    public partial class Listado_Pedidos : System.Web.UI.Page
+    public partial class Listado_Pedidos_Domiciliario : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +18,6 @@ namespace Logistica.Admin
         {
             Modificar.Visible = false;
         }
-
         protected void Lista()
         {
             GvUsuarios.DataSource = Mostrar.ListaPedidos();
@@ -55,7 +53,6 @@ namespace Logistica.Admin
             Limpiar();
             OcultarDiv();
         }
-
         public void Limpiar()
         {
             txtCliente.Text = string.Empty;
@@ -75,21 +72,6 @@ namespace Logistica.Admin
             txtDescripcion.Text = Pedido.Descripcion;
 
             Modificar.Visible = true;
-        }
-
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-            int eliminar = int.Parse(hdPedidoID.Value);
-            bool resultado = Eliminar_Pedido.EliminarPedido(eliminar);
-
-            if (resultado == true)
-            {
-                Response.Write("<script>alert('Registro Eliminado')</script>");
-            }
-            else
-            {
-                Response.Write("<script>alert('Ocurrio Un Erro Al Eliminar')</script>");
-            }
         }
     }
 }

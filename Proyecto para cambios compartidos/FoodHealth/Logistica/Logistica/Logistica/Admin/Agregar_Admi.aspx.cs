@@ -47,7 +47,7 @@ namespace Logistica
             }
             if (RadioAdmin.Checked == true)
             {
-                Rol = 2;
+                Rol = 3;
                 int resultado = Registrar_Domi.RegistrarDomi(Documento, Correo, Nombre, contraseña, Rol);
                 resultado = Registrar_Usuario.RegistrarUsuario(Documento, Correo, Nombre, Direccion, contraseña, Rol);
 

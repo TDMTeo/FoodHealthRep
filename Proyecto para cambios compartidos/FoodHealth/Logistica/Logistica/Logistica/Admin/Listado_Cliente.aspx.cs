@@ -88,5 +88,20 @@ namespace Logistica
 
             Modificar.Visible = true;
         }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int eliminar = int.Parse(hdClientesID.Value);
+            bool resultado = Eliminar_Cliente.EliminarCliente(eliminar);
+
+            if(resultado == true)
+            {
+                Response.Write("<script>alert('Registro Eliminado')</script>");
+            }
+            else
+            {
+                Response.Write("<script>alert('Ocurrio Un Erro Al Eliminar')</script>");
+            }
+        }
     }
 }

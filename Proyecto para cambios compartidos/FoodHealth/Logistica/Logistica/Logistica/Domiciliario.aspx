@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Domiciliario</title>
     <link href="bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
@@ -31,10 +31,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Reportar</a>
+                        <a class="nav-link" href="Listado_Pedidos_Domiciliario.aspx">Pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Rutas</a>
+                        <a class="nav-link" href="Admin/Listado_Pedidos.aspx">Rutas</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil
@@ -50,7 +50,9 @@
             </div>
         </div>
     </nav>
-    <br /> <br /><br />
+    <br />
+    <br />
+    <br />
     <section>
         <div class="container">
             <h1 class="my-4">FoodHealth
@@ -58,7 +60,7 @@
             </h1>
             <div class="row">
                 <div class="col-md-8">
-                    <img class="img-fluid" src="https://d2yoo3qu6vrk5d.cloudfront.net/images/20180810085848/gettyimages-8114788701-482x320.jpg" alt=""/>
+                    <img class="img-fluid" src="https://d2yoo3qu6vrk5d.cloudfront.net/images/20180810085848/gettyimages-8114788701-482x320.jpg" alt="" />
                 </div>
                 <div class="col-md-4">
                     <h3 class="my-3">Domicilios Realizados</h3>

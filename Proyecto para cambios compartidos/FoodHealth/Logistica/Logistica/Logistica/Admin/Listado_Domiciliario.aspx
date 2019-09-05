@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Domiciliarios</title>
     <link href="../bootstrap4/css/bootstrap.css" rel="stylesheet" />
     <link href="../bootstrap4/css/bootstrap-grid.css" rel="stylesheet" />
 
     <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
     <link href="../plugins/sweetAlert2/sweetalert2.min.css" rel="stylesheet" />
 
+    
+    <link href="../css/Iniciar.css" rel="stylesheet" />
     <link href="../plugins/animate.css/animate.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
@@ -72,7 +74,7 @@
     <br />
     <br />
     <form id="form1" runat="server">
-    <div class="container" style="width: 750px;">
+    <div class="container" style="width: 630px;">
         <div class="table-responsive">
             <table class="table table-active">
                 <tr>
@@ -102,6 +104,9 @@
          <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
             Modificar
         </button>
+                  <div style="text-align: right;width:700px">
+             <asp:Button ID="btnEliminar" runat="server" CssClass="btn btn-outline-light" Text="Eliminar" OnClick="btnEliminar_Click" />
+         </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
