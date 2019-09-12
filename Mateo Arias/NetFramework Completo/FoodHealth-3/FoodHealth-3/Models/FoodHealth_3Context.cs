@@ -22,5 +22,7 @@ namespace FoodHealth_3.Models
         public System.Data.Entity.DbSet<FoodHealth_3.Models.Domiciliario> Domiciliarios { get; set; }
 
         public System.Data.Entity.DbSet<FoodHealth_3.Models.TiposEstados> TiposEstados { get; set; }
+
+        public System.Data.Entity.DbSet<FoodHealth_3.Models.Pedido> Pedidoes { get; set; }
     }
 }

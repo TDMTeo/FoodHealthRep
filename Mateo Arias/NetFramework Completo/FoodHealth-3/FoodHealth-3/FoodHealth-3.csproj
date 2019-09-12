@@ -184,6 +184,7 @@
     <Compile Include="Controllers\DomiciliariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PedidoesController.cs" />
     <Compile Include="Controllers\TiposEstadosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,6 +192,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Domiciliario.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\TiposEstados.cs" />
     <Compile Include="Models\FoodHealth_3Context.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -259,11 +261,11 @@
     <Content Include="Views\TiposEstados\Details.cshtml" />
     <Content Include="Views\TiposEstados\Edit.cshtml" />
     <Content Include="Views\TiposEstados\Index.cshtml" />
-    <Content Include="Views\TiposEstados1\Create.cshtml" />
-    <Content Include="Views\TiposEstados1\Delete.cshtml" />
-    <Content Include="Views\TiposEstados1\Details.cshtml" />
-    <Content Include="Views\TiposEstados1\Edit.cshtml" />
-    <Content Include="Views\TiposEstados1\Index.cshtml" />
+    <Content Include="Views\Pedidoes\Create.cshtml" />
+    <Content Include="Views\Pedidoes\Delete.cshtml" />
+    <Content Include="Views\Pedidoes\Details.cshtml" />
+    <Content Include="Views\Pedidoes\Edit.cshtml" />
+    <Content Include="Views\Pedidoes\Index.cshtml" />
     <Content Include="Views\Domiciliarios\Create.cshtml" />
     <Content Include="Views\Domiciliarios\Delete.cshtml" />
     <Content Include="Views\Domiciliarios\Details.cshtml" />

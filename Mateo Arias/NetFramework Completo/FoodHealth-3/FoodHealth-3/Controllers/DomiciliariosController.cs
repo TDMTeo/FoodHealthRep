@@ -17,7 +17,7 @@ namespace FoodHealth_3.Controllers
         // GET: Domiciliarios
         public ActionResult Index()
         {
-            var domiciliarios = db.Domiciliarios.Include(d => d.TiposEstados);
+            var domiciliarios = db.Domiciliarios.Include(d => d.Pedido).Include(d => d.TiposEstados);
             return View(domiciliarios.ToList());
         }
 
@@ -39,6 +39,7 @@ namespace FoodHealth_3.Controllers
         // GET: Domiciliarios/Create
         public ActionResult Create()
         {
+            ViewBag.IdPedido = new SelectList(db.Pedidoes, "IdPedido", "Nombre");
             ViewBag.EstadosID = new SelectList(db.TiposEstados, "EstadosID", "Estado");
             return View();
         }
@@ -48,7 +49,7 @@ namespace FoodHealth_3.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdDomiciliario,Primer_Nombre,Segundo_Nombre,Edad,Año_Nacimiento,Correo,EstadosID")] Domiciliario domiciliario)
+        public ActionResult Create([Bind(Include = "IdDomiciliario,Nombre,Apellido,Edad,Fecha_Nacimiento,Correo,IdPedido,EstadosID")] Domiciliario domiciliario)
         {
             if (ModelState.IsValid)
             {
@@ -57,6 +58,7 @@ namespace FoodHealth_3.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.IdPedido = new SelectList(db.Pedidoes, "IdPedido", "Nombre", domiciliario.IdPedido);
             ViewBag.EstadosID = new SelectList(db.TiposEstados, "EstadosID", "Estado", domiciliario.EstadosID);
             return View(domiciliario);
         }
@@ -73,6 +75,7 @@ namespace FoodHealth_3.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.IdPedido = new SelectList(db.Pedidoes, "IdPedido", "Nombre", domiciliario.IdPedido);
             ViewBag.EstadosID = new SelectList(db.TiposEstados, "EstadosID", "Estado", domiciliario.EstadosID);
             return View(domiciliario);
         }
@@ -82,7 +85,7 @@ namespace FoodHealth_3.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdDomiciliario,Primer_Nombre,Segundo_Nombre,Edad,Año_Nacimiento,Correo,EstadosID")] Domiciliario domiciliario)
+        public ActionResult Edit([Bind(Include = "IdDomiciliario,Nombre,Apellido,Edad,Fecha_Nacimiento,Correo,IdPedido,EstadosID")] Domiciliario domiciliario)
         {
             if (ModelState.IsValid)
             {
@@ -90,6 +93,7 @@ namespace FoodHealth_3.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.IdPedido = new SelectList(db.Pedidoes, "IdPedido", "Nombre", domiciliario.IdPedido);
             ViewBag.EstadosID = new SelectList(db.TiposEstados, "EstadosID", "Estado", domiciliario.EstadosID);
             return View(domiciliario);
         }
