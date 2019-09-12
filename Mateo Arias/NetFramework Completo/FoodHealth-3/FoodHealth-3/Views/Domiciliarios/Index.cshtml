@@ -1,0 +1,63 @@
+﻿@model IEnumerable<FoodHealth_3.Models.Domiciliario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TiposEstados.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Primer_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Segundo_Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Año_Nacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiposEstados.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Primer_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Segundo_Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Año_Nacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdDomiciliario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdDomiciliario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdDomiciliario })
+        </td>
+    </tr>
+}
+
+</table>
