@@ -49,7 +49,7 @@ namespace FoodHealth_3.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IdDomiciliario,Nombre,Apellido,Edad,Fecha_Nacimiento,Correo,IdPedido,EstadosID")] Domiciliario domiciliario)
+        public ActionResult Create([Bind(Include = "IdDomiciliario,Nombre,Apellido,Fecha_Nacimiento,Correo,IdPedido,EstadosID")] Domiciliario domiciliario)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace FoodHealth_3.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IdDomiciliario,Nombre,Apellido,Edad,Fecha_Nacimiento,Correo,IdPedido,EstadosID")] Domiciliario domiciliario)
+        public ActionResult Edit([Bind(Include = "IdDomiciliario,Nombre,Apellido,Fecha_Nacimiento,Correo,IdPedido,EstadosID")] Domiciliario domiciliario)
         {
             if (ModelState.IsValid)
             {
